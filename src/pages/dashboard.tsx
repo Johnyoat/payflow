@@ -1,5 +1,9 @@
+import Header from "../components/Header";
+
 const Dashboard = () => {
-  return <p>Hello World</p>
+  return(
+      <Header/>
+  )
 }
 
 
