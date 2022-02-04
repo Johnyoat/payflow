@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import * as Icon from 'react-feather';
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -22,17 +22,19 @@ const Home: NextPage = () => {
           Get started by uploading your CSV
         </p>
 
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <div style={{
-                display: 'flex',
-            }}>
-                <p>Click to upload  File</p>
-                <Icon.File/>
-            </div>
-          </div>
+       <Link href={"/dashboard"}>
+           <div className={styles.grid}>
+               <div className={styles.card}>
+                   <div style={{
+                       display: 'flex',
+                   }}>
+                       <p>Click to upload  File</p>
+                       <Icon.File/>
+                   </div>
+               </div>
 
-        </div>
+           </div>
+       </Link>
       </main>
 
       <footer className={styles.footer}>
